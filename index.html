@@ -245,20 +245,10 @@ https://templatemo.com/tm-531-reflux
           <div class="row p-0">
             <div class="col-md-12 p-0">
               <img src="assets/images/Cv denys.png" alt="CV" id="cv" class="col-md-12 mb-4">
-              <div class="service-item col-md-3 col-4 ml-4 p-4 d-flex flex-column align-items-center download" style="height: auto;" onclick="downloadCV()">
+              <div class="service-item col-md-3 col-4 ml-4 p-4 d-flex flex-column align-items-center download" style="height: auto;" onclick="if(localStorage.getItem('lang') && localStorage.getItem('lang') == 0) { window.open('assets/docs/denys.pdf') } else { window.open('assets/docs/cv.en.pdf') }">
                 <h2 data-lang="download">Descargar</h2>
               </div>
             </div>
-            <script>
-              function downloadCV() {
-                  const lang = localStorage.getItem('lang');
-                  if (lang && lang == 0) {
-                      window.open('assets/docs/Cv.pdf');
-                  } else {
-                      window.open('assets/docs/cv.en.pdf');
-                  }
-              }
-          </script>
 
           </div>
         </div>
