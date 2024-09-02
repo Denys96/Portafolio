@@ -60,7 +60,7 @@ https://templatemo.com/tm-531-reflux
                 <li><a href="#section3" data-lang="jobs">Mis Trabajos</a></li>
                 <li><a href="#section5" data-lang="cert">Certificaciones</a></li>
                 <li><a href="#section6" data-lang="rese">Reseñas</a></li>
-                <li><a href="#section4" data-lang="contact">Contacto</a></li>
+                <li><a href="#section4" data-lang="contact">Contacto</a></li> 
               </ul>
               <ul class="d-flex col-12 p-0 mt-4 languaje">
                 <!--<li class="col-6 p-0"><a href="#" class="translate" id="es" data-index="0">Español</a></li>
@@ -70,13 +70,13 @@ https://templatemo.com/tm-531-reflux
             <div class="social-network">
               <ul class="soial-icons">
                 <li>
-                  <a href="https://www.linkedin.com/in/marvin-sol%C3%B3rzano-b0042a268/"><i class="fa fa-linkedin"></i></a>
+                  <a href="https://linkedin.com/in/denys-alexander-hernandez-maravilla"><i class="fa fa-linkedin"></i></a>
                 </li>
                 <li>
                   <a href="https://github.com/Denys96"><i class="fa fa-github"></i></a>
                 </li>
                 <li>
-                  <a href="mailto:cruzdenis046@gmail.com"><i class="fa fa-envelope"></i></a>
+                  <a href="mailto:denisalexaner_96@hotmail.com"><i class="fa fa-envelope"></i></a>
                 </li>
               </ul>
             </div>
@@ -207,31 +207,31 @@ https://templatemo.com/tm-531-reflux
           <div class="skill">
             <p>Protocolos de red</p>
             <div class="progress">
-              <div class="progress-bar" style="width: 70%">70%</div>
+              <div class="progress-bar" style="width: 80%">80%</div>
             </div>
           </div>
           <div class="skill">
             <p>Configuracion y mantenimiento</p>
             <div class="progress">
-              <div class="progress-bar" style="width: 70%">70%</div>
+              <div class="progress-bar" style="width: 85%">85%</div>
             </div>
           </div>
           <div class="skill">
             <p>Seguridad de la red</p>
             <div class="progress">
-              <div class="progress-bar" style="width: 50%">50%</div>
+              <div class="progress-bar" style="width: 75%">75%</div>
             </div>
           </div>
           <div class="skill">
             <p>Resolucion de problemas de la red</p>
             <div class="progress">
-              <div class="progress-bar" style="width: 50%">50%</div>
+              <div class="progress-bar" style="width: 85%">85%</div>
             </div>
           </div>
           <div class="skill">
             <p>Virtualizacion de redes</p>
             <div class="progress">
-              <div class="progress-bar" style="width: 70%">70%</div>
+              <div class="progress-bar" style="width: 80%">80%</div>
             </div>
           </div>
         </section>
@@ -429,7 +429,7 @@ https://templatemo.com/tm-531-reflux
                         ><i class="fa fa-github"></i
                       ></a>
                       <h4>Academica</h4>
-                      <span data-lang="lovemascot">La aplicación es para llevar un registro de los estudiantes asi como de las incripciones de materias entre otros. </span>
+                      <span data-lang="academica">La aplicación es para llevar un registro de los estudiantes asi como de las incripciones de materias entre otros. </span>
                       <h4>Rol</h4>
                       <span data-lang="rol">Desarrollador </span>
                       <h4 data-lang="lenguaje">Lenguajes utilizados</h4>
@@ -740,7 +740,7 @@ https://templatemo.com/tm-531-reflux
               <div class="container">
                 <form id="contact" action="" method="post">
                   <input type="hidden" name="to_name" value="Denys Hernández">
-                  <input type="hidden" name="to_email" value="cruzdenis046@gmail.com">
+                  <input type="hidden" name="to_email" value="denisalexaner_96@hotmail.com">
                   <div class="row">
                     <div class="col-md-6">
                       <fieldset>
@@ -792,7 +792,7 @@ https://templatemo.com/tm-531-reflux
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <button type="submit" id="form-submit" class="button" data-lang="send">
+                        <button type="submit" id="button" class="button" data-lang="send">
                           Enviar Mensaje
                         </button>
                       </fieldset>
@@ -955,21 +955,24 @@ profilePic.addEventListener('mouseout', () => {
 
     </script>
     <script type="text/javascript">
-        emailjs.init("MGDxCUuOMYk3CSxXV");
+      emailjs.init('p0bUXlHcUYIWjNpW_')
     </script>
     <script type="text/javascript">
         window.onload = function() {
 
+          const btn = document.getElementById('button');
+
             document.getElementById('contact')
             .addEventListener('submit', function(event) {
                 event.preventDefault();
-
+                
                 const serviceID = 'service_denys';
-                const templateID = 'template_90ev7ee';
+                const templateID = 'template_on9zpvi';
 
-                emailjs.sendForm(serviceID, templateID, this, 'MGDxCUuOMYk3CSxXV')
+                emailjs.sendForm(serviceID, templateID, this, 'p0bUXlHcUYIWjNpW_')
                 .then(() => {
                     alert('Send!');
+                    this.reset(); // Restablece el formulario después de un envío exitoso
                 }, (err) => {
                     alert(JSON.stringify(err));
                 });
