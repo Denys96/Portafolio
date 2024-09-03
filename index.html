@@ -758,7 +758,7 @@ https://templatemo.com/tm-531-reflux
                       <fieldset>
                         <input
                           name="from_email"
-                          type="text"
+                          type="email"
                           class="form-control"
                           id="from_email"
                           placeholder="Dirección de Email..."
@@ -966,6 +966,14 @@ profilePic.addEventListener('mouseout', () => {
             .addEventListener('submit', function(event) {
                 event.preventDefault();
                 
+                const emailField = document.getElementById('from_email');
+                const emailValue = emailField.value;
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              
+                if (!emailPattern.test(emailValue)) {
+                  alert('Por favor, introduce una dirección de correo electrónico válida.');
+                  return;
+                }
                 const serviceID = 'service_denys';
                 const templateID = 'template_on9zpvi';
 
